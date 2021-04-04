@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="bg-light py-3 mb-3 border-bottom">
+      <div
+        class="container d-grid gap-3 align-items-center"
+        style="grid-template-columns: 1fr 2fr"
+      >
+        <a class="brand-logo" href="#">Logo</a>
+
+        <div class="d-flex align-items-center">
+          <form class="w-100 me-3">
+            <input type="search" class="form-control" placeholder="Search..." />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper container-fluid">
+      <div class="row px-3 content-wrap">
+        <article
+          class="col col-sm-6 col-lg-3 item"
+          xyz="fade front-3 flip-down-50% duration-10 stagger-5"
+        >
+          <div class="item-cover" xyz="fade down-100% back-5">
+            <a href="#"> This is item Title </a>
+          </div>
+          <div class="item-title">
+            <input type="text" value="do homework" />
+          </div>
+          <div class="item-content">
+            <textarea>Lorem ipsum dolor,</textarea>
+          </div>
+          <div class="d-flex gap-2 mt-2">
+            <button
+              type="button"
+              class="btn btn-sm btn-light btn-hover d-flex align-items-center close-details"
+            >
+              <i class="material-icons"> arrow_back </i>
+            </button>
+
+            <button
+              class="btn btn-sm btn-light btn-hover d-flex align-items-center check-btn check-action"
+            >
+              <i class="material-icons"> check_circle_outline </i>
+            </button>
+          </div>
+          <svg class="svg-check" x="0px" y="0px" viewBox="0 0 135 110">
+            <rect
+              class="box"
+              x="5"
+              y="5"
+              width="100"
+              height="100"
+              transform="rotate(90 55 55)"
+            />
+            <path class="check" d="M126.8,14L55.7,85.1L29.2,63.4" />
+          </svg>
+        </article>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

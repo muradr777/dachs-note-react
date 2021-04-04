@@ -1,0 +1,46 @@
+.svg-check {
+    display: none;
+    transform: translate(-50%, -50%);
+    top: 5%; left: 50%;
+    position: absolute;
+    width: 100px;
+    margin: 8rem auto;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .item.checked .svg-check {
+      display: block;
+      opacity: 1;
+      z-index: 4;
+  }
+  
+  .svg-check .check {
+    stroke: var(--bs-light);
+    fill: none;
+    stroke-width: 12;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: check .75s linear forwards;
+    animation-delay: 1s;
+  }
+  
+  .svg-check .box {
+    stroke: var(--bs-light);
+    stroke-width: 12;
+    fill: none;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: draw 1s linear forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes draw {
+    0% { stroke-dashoffset: -400; }
+    100% { stroke-dashoffset: 400; }
+  }
+    
+  @keyframes check {
+    0% { stroke-dashoffset: -400; }
+    100% { stroke-dashoffset: 0; }
+  }
